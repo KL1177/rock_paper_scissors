@@ -13,43 +13,50 @@
                 "paper",
                 "scissors"
             ];
-            
+
             function getComputerChoice(computerChoice) {
                 return computerChoice[Math.floor(Math.random() * computerChoice.length)]
             };
 
+            let computerSelection = getComputerChoice(computerChoice);
+
             // Check to see if working with console.log
-            console.log(getComputerChoice(computerChoice));
+            console.log(computerSelection);
+
 
             // Player selects rock, paper or scissors
-            let playerChoice = prompt("Choose rock, paper or scissors").toLowerCase;
+            let playerChoice = prompt("Choose rock, paper or scissors");
+            let playerSelection = playerChoice.toLocaleLowerCase();
 
-            function playRound(playerChoice, computerChoice) {
+            console.log(playerChoice);
+            console.log(playerSelection);
+
+            function playRound(playerSelection, computerSelection) {
                 // Player chooses rock
-                    if (playerChoice == "rock" && computerChoice == "scissors") {
+                    if (playerSelection == "rock" && computerSelection == "scissors") {
                         alert("You win! Rock beats scissors.");
-                    } else if (playerChoice == "rock" && computerChoice == "paper") {
+                    } else if (playerSelection == "rock" && computerSelection == "paper") {
                         alert("You lose! Paper beats rock.");
-                    } else if (playerChoice == "rock" && computerChoice == "rock") {
+                    } else if (playerSelection == "rock" && computerSelection == "rock") {
                         alert("You draw. No one wins.");
                 // Player chooses paper
-                    } else if (playerChoice == "paper" && computerChoice == "rock") {
+                    } else if (playerSelection == "paper" && computerSelection == "rock") {
                         alert("You win! Paper beats rock.");
-                    } else if (playerChoice == "paper" && computerChoice == "scissors") {
+                    } else if (playerSelection == "paper" && computerSelection == "scissors") {
                         alert("You lose! Scissors beats paper.");
-                    } else if (playerChoice == "paper" && computerChoice == "paper") {
+                    } else if (playerSelection == "paper" && computerSelection == "paper") {
                         alert("You draw. No one wins.");
                 // Player chooses scissors
-                    } else if (playerChoice == "scissors" && computerChoice == "paper") {
+                    } else if (playerSelection == "scissors" && computerSelection == "paper") {
                         alert("You win! Scissors beats paper.");
-                    } else if (playerChoice == "scissors" && computerChoice == "rock") {
+                    } else if (playerSelection == "scissors" && computerSelection == "rock") {
                         alert("You lose! Scissors beats paper.");
-                    } else if (playerChoice == "scissors" && computerChoice == "scissors") {
+                    } else if (playerSelection == "scissors" && computerSelection == "scissors") {
                         alert("You draw. No one wins.");
                     } 
             }
 
-             console.log(playRound(playerChoice, computerChoice));
+             console.log(playRound(playerSelection, computerSelection));
         </script>
     </body>
 </html>
