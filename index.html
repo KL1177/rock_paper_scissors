@@ -62,23 +62,22 @@
                     }
             }
 
-            function game() {
-                while (playerScore < 5 && computerScore < 5) {
-                    playRound(playerSelection, computerSelection);
-                }
+        function game(playerScore, computerScore) {
+             while (playerScore < 5 && computerScore < 5) {
+                playRound(playerSelection, computerSelection);
             }
+        }
 
-
-            function getWinner() {
-                if (playerScore == 5) {
-                    return("You win the game!");
-                }
+        function getWinner(playerScore, computerScore) {
+            if (playerScore == 5) {
+                return("You win the game!");
+            }
                 else if (computerScore == 5) {
-                    return("You lose the game!");
-                }
+                return("You lose the game!");
             }
+        }
 
-            game();
+        game();
         </script>
     </body>
 </html>
