@@ -23,15 +23,14 @@
             // Check to see if working with console.log
             console.log(computerSelection);
 
+            // Initialize score to 0 for both computer and player
+            let playerScore = 0;
+            let computerScore = 0;
 
             // Player selects rock, paper or scissors
             let playerSelection = prompt("Choose rock, paper or scissors").toLowerCase();
 
             console.log(playerSelection);
-
-            // Initialize score to 0 for both computer and player
-            let playerScore = 0;
-            let computerScore = 0;
 
             function playRound(playerSelection, computerSelection) {
                 // Player chooses rock
@@ -63,9 +62,11 @@
             }
 
         function game(playerScore, computerScore) {
-             while (playerScore < 5 && computerScore < 5) {
-                playRound(playerSelection, computerSelection);
-            }
+            playRound(playerSelection, computerSelection);
+            playRound(playerSelection, computerSelection);
+            playRound(playerSelection, computerSelection);
+            playRound(playerSelection, computerSelection);
+            playRound(playerSelection, computerSelection);
         }
 
         function getWinner(playerScore, computerScore) {
