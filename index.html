@@ -29,6 +29,10 @@
 
             console.log(playerSelection);
 
+            // Initialize score to 0 for both computer and player
+            let playerScore = 0;
+            let computerScore = 0;
+
             function playRound(playerSelection, computerSelection) {
                 // Player chooses rock
                     if (playerSelection == computerSelection) {
@@ -58,23 +62,23 @@
                     }
             }
 
-            // Need a function for the score keeping
-
-            // Initialize score to 0 for both computer and player
-            let playerScore = 0;
-            let computerScore = 0;
-
-            function getScore(player) {
-               
+            function game() {
+                while (playerScore < 5 && computerScore < 5) {
+                    playRound(playerSelection, computerSelection);
+                }
             }
+
 
             function getWinner() {
-                
+                if (playerScore == 5) {
+                    return("You win the game!");
+                }
+                else if (computerScore == 5) {
+                    return("You lose the game!");
+                }
             }
 
-
-
-             console.log(playRound(playerSelection, computerSelection));
+            game();
         </script>
     </body>
 </html>
