@@ -21,17 +21,16 @@
             // Player selects rock, paper or scissors
             let playerSelection = prompt("Choose rock, paper or scissors").toLowerCase();
 
-            console.log(playerSelection);
-
             function playRound(playerSelection) { 
                 function getComputerChoice(computerChoice) {
-                return computerChoice[Math.floor(Math.random() * computerChoice.length)]
-            };
+                return computerChoice[Math.floor(Math.random() * computerChoice.length)];
+            }
 
             let computerSelection = getComputerChoice(computerChoice);
 
             // Check to see if working with console.log
             console.log(computerSelection);
+
 
                 // Player chooses rock
                     if (playerSelection == computerSelection) {
