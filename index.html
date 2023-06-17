@@ -15,8 +15,8 @@
             ];
 
             function getComputerChoice(computerChoice) {
-                return computerChoice[Math.floor(Math.random() * computerChoice.length)];
-            }
+                return computerChoice[Math.floor(Math.random() * computerChoice.length)]
+            };
 
             let computerSelection = getComputerChoice(computerChoice);
 
@@ -32,7 +32,7 @@
 
             console.log(playerSelection);
 
-            function playRound(playerSelection, computerSelection) {
+            function playRound(playerSelection) {
                 // Player chooses rock
                     if (playerSelection == computerSelection) {
                         alert("Draw!");
