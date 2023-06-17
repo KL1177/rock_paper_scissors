@@ -36,36 +36,30 @@
                 // Player chooses rock
                     if (playerSelection == computerSelection) {
                         alert("Draw!");
-                        return;
                     } else if (playerSelection == "rock" && computerSelection == "paper") {
                         computerScore += 1;
                         alert("You lose! Paper beats rock.");
-                        return;
                     } else if (playerSelection == "rock" && computerSelection == "scissors") {
                         playerScore += 1;
                         alert("You win! Rock beats scissors.");
-                        return;
                     }
                 // Player chooses paper
                     else if (playerSelection == "paper" && computerSelection == "rock") {
                         playerScore += 1;
                         alert("You win! Paper beats rock.");
-                        return;
                     } else if (playerSelection == "paper" && computerSelection == "scissors") {
                         computerScore += 1;
                         alert("You lose! Scissors beats paper.");
-                        return;
                     }
                 // Player chooses scissors
                     else if (playerSelection == "scissors" && computerSelection == "paper") {
                         playerScore += 1;
                         alert("You win! Scissors beats paper.");
-                        return;
                     } else if (playerSelection == "scissors" && computerSelection == "rock") {
                         computerScore += 1;
                         alert("You lose! Scissors beats paper.");
-                        return;
                     }
+                    return;
             }
 
         function game(playerScore, computerScore) {
