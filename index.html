@@ -14,7 +14,17 @@
                 "scissors"
             ];
 
-            function getComputerChoice(computerChoice) {
+            // Initialize score to 0 for both computer and player
+            let playerScore = 0;
+            let computerScore = 0;            
+
+            // Player selects rock, paper or scissors
+            let playerSelection = prompt("Choose rock, paper or scissors").toLowerCase();
+
+            console.log(playerSelection);
+
+            function playRound(playerSelection) { 
+                function getComputerChoice(computerChoice) {
                 return computerChoice[Math.floor(Math.random() * computerChoice.length)]
             };
 
@@ -23,16 +33,6 @@
             // Check to see if working with console.log
             console.log(computerSelection);
 
-            // Initialize score to 0 for both computer and player
-            let playerScore = 0;
-            let computerScore = 0;
-
-            // Player selects rock, paper or scissors
-            let playerSelection = prompt("Choose rock, paper or scissors").toLowerCase();
-
-            console.log(playerSelection);
-
-            function playRound(playerSelection) {
                 // Player chooses rock
                     if (playerSelection == computerSelection) {
                         alert("Draw!");
@@ -63,11 +63,11 @@
             }
 
         function game(playerScore, computerScore) {
-            playRound(playerSelection, computerSelection);
-            playRound(playerSelection, computerSelection);
-            playRound(playerSelection, computerSelection);
-            playRound(playerSelection, computerSelection);
-            playRound(playerSelection, computerSelection);
+            playRound(playerSelection);
+            playRound(playerSelection);
+            playRound(playerSelection);
+            playRound(playerSelection);
+            playRound(playerSelection);
             console.log(playerScore);
             console.log(computerScore);
         }
